@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 3683418167
     locked: 0
+  - name: Municao
+    uniqueID: 890544629
+    locked: 0
   - name: Nave
     uniqueID: 2403707019
     locked: 0
