@@ -26,8 +26,7 @@ public class Nave : MonoBehaviour
 
     void Start()
     {
-        // aplica força uma vez só
-        _rb.AddForceX(xSpeed, ForceMode2D.Impulse);
+       
     }
 
     // Update is called once per frame
@@ -37,8 +36,18 @@ public class Nave : MonoBehaviour
     }
     void Movimentar()
     {
-        // Aplicar o movimento no corpo rígido, a direção e a intensidade são atribuidas ao movimento
-        _rb.linearVelocityX = xDir * xSpeed * Time.deltaTime;   
+        if (transform.position.x <= -2.4f && xDir < 0)
+        {
+            _rb.linearVelocityX = 0;
+        }
+        else if (transform.position.x >= 2.4f && xDir > 0)
+        {
+            _rb.linearVelocityX = 0;
+        }
+        else
+        {
+            _rb.linearVelocityX = xDir * xSpeed *  Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
