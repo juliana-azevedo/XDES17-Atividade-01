@@ -1,4 +1,4 @@
-# XDES17-Atividade-01
+# XDES17-Atividade
 ### Entrega da atividade 01 
 
 Essa atividade implementa um scrolling background na vertical e posiciona a nave
