@@ -47,6 +47,9 @@ TagManager:
   - name: Municao
     uniqueID: 890544629
     locked: 0
+  - name: Asteroide
+    uniqueID: 388176459
+    locked: 0
   - name: Nave
     uniqueID: 2403707019
     locked: 0
