@@ -21,6 +21,11 @@ public class AsteroideController : MonoBehaviour
         // Garante que só reage a projéteis/munição (opcional, via Tag)
         // if (!other.CompareTag("Bullet")) return;
 
+        if (other.transform.parent.name == "Shredder-Asteroide")
+        {
+            return;
+        }
+
         // Destroi o projétil que colidiu
         Destroy(other.transform.parent != null ? other.transform.parent.gameObject : other.gameObject);
 
