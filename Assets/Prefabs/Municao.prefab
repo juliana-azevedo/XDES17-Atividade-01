@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5516779469395406019}
   - component: {fileID: 8964194092223085074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6159757585031631764}
   - component: {fileID: 3878546315404148021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 1310922947373438289}
   - component: {fileID: 8796473946816511503}
   - component: {fileID: 8357524858846168871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Municao
   m_TagString: Untagged
   m_Icon: {fileID: 0}

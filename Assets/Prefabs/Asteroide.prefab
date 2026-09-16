@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466389834427011792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colisao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4787802667368747789}
   - component: {fileID: 966809660078015613}
   - component: {fileID: 5312134307647575393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Asteroide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   life: 100
   damage: 50
   explosionPrefab: {fileID: 1528300055533329560, guid: cc23283a0bd5e6446af8bd5f1ca7bbcd, type: 3}
+  audioClip: {fileID: 8300000, guid: 18e894142275f6b45971c6ae81da7218, type: 3}
 --- !u!95 &5312134307647575393
 Animator:
   serializedVersion: 7
@@ -142,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2972458637095738392}
   - component: {fileID: 6790518910552385714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

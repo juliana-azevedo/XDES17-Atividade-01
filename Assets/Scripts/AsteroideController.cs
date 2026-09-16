@@ -10,6 +10,8 @@ public class AsteroideController : MonoBehaviour
     // Arraste o Prefab da explosão aqui pelo Inspector
     [SerializeField] private GameObject explosionPrefab; 
     
+    [SerializeField] AudioClip audioClip;
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -39,6 +41,8 @@ public class AsteroideController : MonoBehaviour
             {
                 print(explosionPrefab);
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                
+                AudioSource.PlayClipAtPoint(audioClip, transform.position);
                 
                 // 2. Destroi o objeto de explosão após o tempo da animação (ex: 0.5s)
                 Destroy(explosion, 0.5f);

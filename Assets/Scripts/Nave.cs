@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Timers;
 
 public class Nave : MonoBehaviour
 {
@@ -18,6 +21,17 @@ public class Nave : MonoBehaviour
     float fireRate = 0.2f;
     float lastFire;
     bool isFiring;   
+    
+    
+    // VIDA
+    [SerializeField] Slider VidaSlider;
+    float vida;
+    
+    [SerializeField] private GameObject explosionPrefab; 
+    
+    [SerializeField] AudioClip audioClip;
+  
+
     
     void Awake()
     {
@@ -86,6 +100,46 @@ public class Nave : MonoBehaviour
     {
         // para ativar e desativar quando o botao é pressionado/ segurado e despressionado
         isFiring = !isFiring;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        vida += 0.2f;
+        if (vida >= 1)
+        {
+            if (vida >= 1f)
+            {
+                GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                
+                AudioSource.PlayClipAtPoint(audioClip, transform.position);
+                
+                //Destroy(explosion, 0.5f);
+                
+                Invoke(nameof(AbrirGameOver), 0.3f);
+            }
+            
+            //SceneManager.LoadScene("GameOver");
+
+        }
+        else
+        {
+            if (explosionPrefab != null)
+            {
+                GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                
+                AudioSource.PlayClipAtPoint(audioClip, transform.position);
+                
+                Destroy(explosion, 0.5f);
+                
+                VidaSlider.value = 0f + vida;
+            }
+        }
+        
+    }
+    
+    void AbrirGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
         
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ScrollBackground : MonoBehaviour
 {
     Material mat; // para guardar o material
-    /*[SerializeField] */ float speed = 0.5f; // aparece no editor do Unity para poder alterar a velocidade
+    [SerializeField]  float speed = 0.5f; // aparece no editor do Unity para poder alterar a velocidade
     float offsetX = 0; // para guardar a posição atual de Y
 
     void Awake()
