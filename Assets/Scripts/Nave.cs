@@ -105,21 +105,14 @@ public class Nave : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         vida += 0.2f;
-        if (vida >= 1)
-        {
-            if (vida >= 1f)
-            {
+        if (vida >= 1) {
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 
                 AudioSource.PlayClipAtPoint(audioClip, transform.position);
                 
-                //Destroy(explosion, 0.5f);
+                Destroy(explosion, 0.5f);
                 
                 Invoke(nameof(AbrirGameOver), 0.3f);
-            }
-            
-            //SceneManager.LoadScene("GameOver");
-
         }
         else
         {
@@ -131,7 +124,7 @@ public class Nave : MonoBehaviour
                 
                 Destroy(explosion, 0.5f);
                 
-                VidaSlider.value = 0f + vida;
+                VidaSlider.value = vida;
             }
         }
         
